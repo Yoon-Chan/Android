@@ -1,2 +1,2 @@
-# Android
-Do it! 안드로이드 개정 7판
+# Android Studio
+Do it! 안드로이드 with Kotlin
