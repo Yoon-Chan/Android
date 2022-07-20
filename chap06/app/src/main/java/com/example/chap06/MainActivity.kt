@@ -11,25 +11,24 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import com.example.chap06.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //바인딩 객체 획등
-        val binding = ActivityMainBinding.inflate(layoutInflater)
+//        //바인딩 객체 획등
+//        val binding = ActivityMainBinding.inflate(layoutInflater)
 
         //액티비티 화면 출력
         setContentView(R.layout.activity_main)
 
-        //뷰 객체 이용
-        binding.visibleBtn.setOnClickListener {
-            binding.targetView.visibility = View.VISIBLE
-        }
-        binding.invisibleBtn.setOnClickListener {
-            binding.targetView.visibility = View.INVISIBLE
-        }
+//        //뷰 객체 이용
+//        binding.visibleBtn.setOnClickListener {
+//            binding.targetView.visibility = View.VISIBLE
+//        }
+//        binding.invisibleBtn.setOnClickListener {
+//            binding.targetView.visibility = View.INVISIBLE
+//        }
 //
 //        val txtView1: TextView = findViewById(R.id.text1)
 //        val button1 = findViewById<Button>(R.id.button1)
