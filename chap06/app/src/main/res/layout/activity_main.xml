@@ -17,31 +17,88 @@
 
 <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:gravity="center">
+    tools:viewBindingIgnore="true">
+
+<!--    <TextView-->
+<!--        android:id="@+id/text1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="hello"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="BUTTONE"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="웹페이지 : https://google.com, 전화번호 : 325-1722, 이메일 : vsvx@naver.com"-->
+<!--        android:autoLink="web|email|phone"/>-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:maxWidth="100dp"-->
+<!--            android:maxHeight="100dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:src="@drawable/lake_1"-->
+<!--            android:background="#0000ff"/>-->
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="BUTTON1"/>-->
+
+<!--    <CheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="check1"/>-->
+<!--    <CheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="check2"/>-->
+
+<!--    <RadioGroup-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <RadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="radio1"/>-->
+
+<!--        <RadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="radio2"/>-->
+<!--    </RadioGroup>-->
+
+    <Button
+        android:id="@+id/visibleBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="visible"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/targetView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Lake Louise"/>
+        android:text="hello world"
+        android:background="#FF0000"
+        android:textColor="#FFFFFF"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/invisibleBtn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/lake_1"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Lake Louise, AB, 캐나다"/>
-
-
-
+        android:text="invisible"/>
 
 </LinearLayout>
