@@ -1,134 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:layout_width="match_parent"
+    >
 
 
-    <TextView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="#FF0000"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:text="HelloWorld"
-        android:gravity="right|bottom"
+    <ImageView
+        android:id="@+id/testImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"/>
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELLO"
+        android:layout_alignBottom="@+id/testImage"
+        android:layout_alignParentRight="true"
         />
 
-<!--
-
-        <Button-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:text="BUTTON01"/>-->
-
-<!--    <Button-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:text="BUTTON02"/>-->
-
-<!--    <Button-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:text="BUTTON03"/>-->
 
 
+</RelativeLayout>
+<!--<LinearLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:gravity="center">-->
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal">-->
-
-<!--        <Button-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="BUTTON01"-->
-<!--            android:layout_weight="1"/>-->
-
-<!--        <Button-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="BUTTON02"-->
-<!--            android:layout_weight="3"/>-->
-
-<!--    </LinearLayout>-->
-
-<!--    <Button-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="BUTTON03"-->
-<!--        android:layout_weight="1"-->
-<!--        />-->
-
-<!--    <Button-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="BUTTON04"/>-->
-
-
-
-
-<!--    <ImageView-->
-<!--        android:layout_width="120px"-->
-<!--        android:layout_height="120px"-->
-<!--        android:src="@drawable/kakao_image"-->
-<!--        android:layout_margin="3px"-->
-<!--        />-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical"-->
-<!--        android:layout_marginBottom="5px"-->
-<!--        android:layout_weight="1"-->
-<!--        >-->
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="카카오톡"-->
-<!--            android:layout_margin="5px"-->
-<!--            android:textColor="@color/black"-->
-<!--            />-->
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:text="[기기 로그인 알림]"-->
-<!--            android:textColor="#B4B4BA"-->
-<!--            android:layout_margin="5px"-->
-<!--            android:layout_weight="1"-->
-<!--            />-->
-
-<!--    </LinearLayout>-->
 
 <!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="120px"-->
-<!--        android:gravity="center_vertical"-->
-<!--        android:text="9월 7일"-->
-<!--        android:textColor="#B4B4BA"-->
-<!--        android:layout_weight="0"-->
-<!--        android:textSize="12sp"-->
-<!--        android:padding="5px"/>-->
-
-<!--    <Button-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="BUTTON01"-->
-<!--        android:layout_weight="1"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:background="#FF0000"-->
+<!--        android:textSize="15dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:text="HelloWorld"-->
+<!--        android:gravity="right|bottom"-->
 <!--        />-->
 
-<!--    <Button-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="BUTTON02"-->
-<!--        android:layout_weight="3"-->
-<!--        />-->
+<!--&lt;!&ndash;-->
 
-</LinearLayout>
+<!--        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="BUTTON01"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <Button&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="BUTTON02"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <Button&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="BUTTON03"/>&ndash;&gt;-->
+
+
+
+<!--&lt;!&ndash;    <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:orientation="horizontal">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="BUTTON01"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="1"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="BUTTON02"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="3"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </LinearLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <Button&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="BUTTON03"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;        />&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <Button&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="BUTTON04"/>&ndash;&gt;-->
+
+
+
+
+<!--&lt;!&ndash;    <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="120px"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="120px"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:src="@drawable/kakao_image"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_margin="3px"&ndash;&gt;-->
+<!--&lt;!&ndash;        />&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginBottom="5px"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;        >&ndash;&gt;-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="카카오톡"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_margin="5px"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="@color/black"&ndash;&gt;-->
+<!--&lt;!&ndash;            />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="[기기 로그인 알림]"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="#B4B4BA"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_margin="5px"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;            />&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </LinearLayout>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="120px"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:gravity="center_vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="9월 7일"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textColor="#B4B4BA"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_weight="0"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textSize="12sp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:padding="5px"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <Button&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="BUTTON01"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;        />&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <Button&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="BUTTON02"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_weight="3"&ndash;&gt;-->
+<!--&lt;!&ndash;        />&ndash;&gt;-->
+
+<!--</LinearLayout>-->
