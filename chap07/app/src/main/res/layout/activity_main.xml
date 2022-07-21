@@ -1,28 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<!--Framelayout 예제-->
-<FrameLayout
+
+<!--GridLayout 에제-->
+<GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:columnCount="3"
     >
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="BUTTON1"/>
+    <Button android:text="A"
+        android:layout_rowSpan="2"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"/>
+    <Button android:text="B"/>
+    <Button android:text="C"/>
+    <Button android:text="D"/>
+    <Button android:text="E"/>
+    <Button android:text="F" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        android:visibility="invisible"
-        android:clickable="true"
-        />
-</FrameLayout>
+
+</GridLayout>
+
+
+
+<!--Framelayout 예제-->
+<!--<FrameLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    >-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="BUTTON1"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@mipmap/ic_launcher"-->
+<!--        android:visibility="invisible"-->
+<!--        android:clickable="true"-->
+<!--        />-->
+<!--</FrameLayout>-->
 
 <!--릴레이션 레이아웃 예제-->
 
