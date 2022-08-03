@@ -6,13 +6,18 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
+import com.example.chap11.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
         //업 버튼 보이게 하는 구문
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        
+        //액션바의 내용을 툴바에 적용
+        setSupportActionBar(binding.toolbar)
     }
     // 업 버튼 누를 때 실행되는 함수
     override fun onSupportNavigateUp(): Boolean {
