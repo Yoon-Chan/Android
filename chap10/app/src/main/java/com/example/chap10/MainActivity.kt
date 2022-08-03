@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
 
-        
+
 //        val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
 //        val builder : NotificationCompat.Builder
 //
