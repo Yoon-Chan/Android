@@ -1,15 +1,24 @@
 package com.example.chap11
 
+import android.content.Context
+import android.graphics.BitmapFactory
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Rect
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
 import android.view.*
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.chap11.databinding.ActivityMainBinding
@@ -49,6 +58,61 @@ class MyAdapter(val datas : MutableList<String>) : RecyclerView.Adapter<Recycler
 
 }
 
+
+//아이템 데커레이션 구현
+class MyDecoration(val context : Context) : RecyclerView.ItemDecoration() {
+
+    // 항목이 배치되기 전에 호출
+    override fun onDraw(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
+        super.onDraw(c, parent, state)
+        c.drawBitmap(BitmapFactory.decodeResource(context.resources, R.drawable.stadium), 0f, 0f, null)
+    }
+
+    //항목이 모두 배치된 후 호출
+    override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
+        super.onDrawOver(c, parent, state)
+
+        //뷰 크기 계산
+        val width = parent.width
+        val height = parent.height
+
+        // 이미지 크기 계산
+        val dr: Drawable? = ResourcesCompat.getDrawable(context.resources, R.drawable.kbo, null)
+        val drWidth = dr?.intrinsicWidth
+        val drheight = dr?.intrinsicHeight
+
+        //이미지가 그려질 위치 계산
+        val left = width / 2 - drWidth?.div(2) as Int
+        val top = height / 2 -drheight?.div(2) as Int
+        c.drawBitmap(
+            BitmapFactory.decodeResource(context.resources, R.drawable.kbo),
+            left.toFloat(),
+            top.toFloat(),
+            null
+        )
+
+    }
+
+    // 개별 항목을 꾸밀 때 호출
+    override fun getItemOffsets(
+        outRect: Rect,
+        view: View,
+        parent: RecyclerView,
+        state: RecyclerView.State
+    ) {
+        super.getItemOffsets(outRect, view, parent, state)
+
+        val index = parent.getChildAdapterPosition(view) + 1
+        if(index % 3 == 0){
+            outRect.set(10, 10, 10, 60) //left, top, right, bottom 순
+        }else{
+            outRect.set(10,10,10,0)
+        }
+        view.setBackgroundColor(Color.LTGRAY)
+        ViewCompat.setElevation(view, 20.0f)
+    }
+}
+
 //프래그먼트 상속 클래스
 //class OneFragment : Fragment() {
 //    //XML 뷰 바인딩 아직 XML 파일을 생성하지 않아 오류가 발생.
@@ -75,12 +139,17 @@ class MainActivity : AppCompatActivity() {
         for(i in 1..10){
             data.add("Item $i")
         }
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.orientation = LinearLayoutManager.VERTICAL
+        binding.recyclerView.layoutManager = layoutManager
+        //GridLayoutManager(this, 3,
+        //GridLayoutManager.HORIZONTAL, false)
         binding.recyclerView.adapter = MyAdapter(data)
         binding.recyclerView.addItemDecoration(
-            DividerItemDecoration(
-                this,
-                LinearLayoutManager.VERTICAL)
+            MyDecoration(this)
+//            DividerItemDecoration(
+//                this,
+//                LinearLayoutManager.VERTICAL)
         )
 
 //        val fragmentManager : FragmentManager = supportFragmentManager
