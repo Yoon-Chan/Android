@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-
-<LinearLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.recyclerview.widget.RecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+    android:id="@+id/recyclerView"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    >
+    android:layout_height="match_parent"/>
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.Toolbar.Primary"/>
 
-</LinearLayout>
+
+
+    <!--<LinearLayout-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:id="@+id/fragment_content"-->
+    <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:orientation="vertical"-->
+    <!--    >-->
+    <!--&lt;!&ndash;    <androidx.appcompat.widget.Toolbar&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:id="@+id/toolbar"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;        style="@style/Widget.MaterialComponents.Toolbar.Primary"/>&ndash;&gt;-->
+
+
+
+    <!--</LinearLayout>-->
