@@ -15,15 +15,18 @@ import androidx.appcompat.widget.SearchView
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.chap11.databinding.ActivityMainBinding
 import com.example.chap11.databinding.FragmentOneBinding
 import com.example.chap11.databinding.ItemMainBinding
+import com.example.chap11.databinding.ItemPagerBinding
 
 
 //뷰 홀더 준비
@@ -113,6 +116,45 @@ class MyDecoration(val context : Context) : RecyclerView.ItemDecoration() {
     }
 }
 
+
+
+// 뷰 페이저2 구현 - 리사이클러 뷰 어댑터 이용
+class MyPagerViewHolder(val binding : ItemPagerBinding) : RecyclerView.ViewHolder(binding.root)
+
+class MyPagerAdapter(val datas : MutableList<String>): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+    override fun getItemCount(): Int =datas.size
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
+        MyPagerViewHolder(ItemPagerBinding.inflate(LayoutInflater.from(
+                parent.context), parent, false))
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val binding = (holder as MyPagerViewHolder).binding
+
+        //뷰에 데이터 출력
+        binding.itemPagerTextView.text =  datas[position]
+        when (position % 3){
+            0 -> binding.itemPagerTextView.setBackgroundColor(Color.RED)
+            1 -> binding.itemPagerTextView.setBackgroundColor(Color.BLUE)
+            2 -> binding.itemPagerTextView.setBackgroundColor(Color.GREEN)
+        }
+    }
+
+
+}
+
+//뷰 페이저2 구현 - 프래그먼트 어댑터 이용
+class MyFragmentPagerAdapter(activity : FragmentActivity) : FragmentStateAdapter(activity) {
+    val fragments : List<Fragment>
+    init {
+        fragments = listOf(OneFragment() , TwoFragment(), ThreeFragment())
+        Log.d("chan", "fragments size : ${fragments.size}")
+    }
+    override fun getItemCount(): Int = fragments.size
+
+    override fun createFragment(position: Int): Fragment =fragments[position]
+}
+
 //프래그먼트 상속 클래스
 //class OneFragment : Fragment() {
 //    //XML 뷰 바인딩 아직 XML 파일을 생성하지 않아 오류가 발생.
@@ -134,23 +176,34 @@ class MainActivity : AppCompatActivity() {
 
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         val data = mutableListOf<String>()
-        for(i in 1..10){
+        for(i in 1..10) {
             data.add("Item $i")
         }
-        val layoutManager = LinearLayoutManager(this)
-        layoutManager.orientation = LinearLayoutManager.VERTICAL
-        binding.recyclerView.layoutManager = layoutManager
+
+        // 뷰 페이저2 어댑터에 적용
+        //binding.viewpager.adapter = MyPagerAdapter(data)
+
+        // 뷰 페이저2 프래그먼트 적용
+        binding.viewpager.adapter = MyFragmentPagerAdapter(this)
+
+
+//        val data = mutableListOf<String>()
+//        for(i in 1..10){
+//            data.add("Item $i")
+//        }
+//        val layoutManager = LinearLayoutManager(this)
+//        layoutManager.orientation = LinearLayoutManager.VERTICAL
+//        binding.recyclerView.layoutManager = layoutManager
         //GridLayoutManager(this, 3,
         //GridLayoutManager.HORIZONTAL, false)
-        binding.recyclerView.adapter = MyAdapter(data)
-        binding.recyclerView.addItemDecoration(
-            MyDecoration(this)
+//        binding.recyclerView.adapter = MyAdapter(data)
+//        binding.recyclerView.addItemDecoration(
+//            MyDecoration(this)
 //            DividerItemDecoration(
 //                this,
 //                LinearLayoutManager.VERTICAL)
-        )
+//        )
 
 //        val fragmentManager : FragmentManager = supportFragmentManager
 //        val transaction : FragmentTransaction = fragmentManager.beginTransaction()

@@ -4,10 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android_ex/Android/chap11/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Android_ex/Android/chap11/app/src/main/res/layout/drawer_main.xml" value="0.1" />
+        <entry key="..\:/Android_ex/Android/chap11/app/src/main/res/layout/fragment_one.xml" value="0.19123606889564337" />
+        <entry key="..\:/Android_ex/Android/chap11/app/src/main/res/layout/fragment_three.xml" value="0.3921875" />
+        <entry key="..\:/Android_ex/Android/chap11/app/src/main/res/layout/fragment_two.xml" value="0.3921875" />
         <entry key="..\:/Android_ex/Android/chap11/app/src/main/res/layout/fragmentonebinding.xml" value="0.2669706180344478" />
         <entry key="..\:/Android_ex/Android/chap11/app/src/main/res/layout/item_main.xml" value="0.4038610038610039" />
+        <entry key="..\:/Android_ex/Android/chap11/app/src/main/res/layout/item_pager.xml" value="0.3953125" />
         <entry key="..\:/Android_ex/Android/chap11/app/src/main/res/layout/onebinding.xml" value="0.26646403242147926" />
         <entry key="..\:/Android_ex/Android/chap11/app/src/main/res/menu/menu_main.xml" value="0.5358974358974359" />
+        <entry key="..\:/Android_ex/Android/chap11/ch11_jetpack/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android_ex/Android/chap11/ch11_jetpack/src/main/res/layout/fragment_one.xml" value="0.5458333333333333" />
+        <entry key="..\:/Android_ex/Android/chap11/ch11_jetpack/src/main/res/layout/fragment_three.xml" value="0.5458333333333333" />
+        <entry key="..\:/Android_ex/Android/chap11/ch11_jetpack/src/main/res/layout/fragment_two.xml" value="0.5458333333333333" />
+        <entry key="..\:/Android_ex/Android/chap11/ch11_jetpack/src/main/res/layout/item_recyclerview.xml" value="0.5458333333333333" />
+        <entry key="..\:/Android_ex/Android/chap11/ch11_jetpack/src/main/res/menu/menu_main.xml" value="0.5447916666666667" />
       </map>
     </option>
   </component>
