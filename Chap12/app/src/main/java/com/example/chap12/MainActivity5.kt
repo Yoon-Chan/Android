@@ -12,6 +12,7 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,6 +21,7 @@ import com.example.chap12.databinding.ActivityMain5Binding
 import com.example.chap12.databinding.ItemRecyclerviewBinding
 
 class MainActivity5 : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         val binding = ActivityMain5Binding.inflate(layoutInflater)
 
