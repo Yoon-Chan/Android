@@ -3,6 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.chap15">
 
+    <queries>
+        <package android:name="com.example.test_outter" />
+    </queries>
+    <queries>
+        <package android:name="com.example.test_outter" />
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,9 +21,37 @@
         android:theme="@style/Theme.Chap15"
         tools:targetApi="31">
         <service
+            android:name=".MyJobService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"></service>
+        <service
+            android:name=".MyService3"
+            android:enabled="true"
+            android:exported="true"
+            />
+
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+
+        <service
+            android:name=".MyService2"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ACTION_OUTER_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+
+        <service
             android:name=".MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity
             android:name=".MainActivity"
