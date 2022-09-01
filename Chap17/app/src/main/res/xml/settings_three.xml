@@ -6,6 +6,13 @@
         app:key="a"
         app:summary="A Setting summary"
         app:title="A Setting"
-        
+        app:fragment="com.example.chap17.ASettingFragment"/>
+
+    <Preference
+        app:key="b"
+        app:summary="B Setting summary"
+        app:title="B Setting"
+        app:fragment="com.example.chap17.BSettingFragment"/>
+
 
 </PreferenceScreen>

@@ -3,10 +3,31 @@ package com.example.chap17
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.example.chap17.databinding.ActivityMain4Binding
+//분할 설정 화면을 보여주는 액티비티 코드
+class MainActivity4 : AppCompatActivity(), PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
 
-class MainActivity4 : AppCompatActivity() {
+    override fun onPreferenceStartFragment(
+        caller: PreferenceFragmentCompat,
+        pref: Preference
+    ): Boolean {
+        //새로운 프래그먼트 인스턴스화
+        val args = pref.extras
+        val fragment = supportFragmentManager.fragmentFactory.instantiate(
+            classLoader,
+            pref.fragment.toString()
+            )
+        fragment.arguments = args
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.setting_content, fragment)
+            .addToBackStack(null)
+            .commit()
+        return true
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMain4Binding.inflate(layoutInflater)
@@ -41,6 +62,18 @@ class MySettingFragment : PreferenceFragmentCompat() {
 
 class MySettingFragment2 : PreferenceFragmentCompat(){
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.settings_two, rootKey)
+        setPreferencesFromResource(R.xml.settings_three, rootKey)
+    }
+}
+
+class ASettingFragment : PreferenceFragmentCompat(){
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.asetting, rootKey)
+    }
+}
+
+class BSettingFragment : PreferenceFragmentCompat(){
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.bsetting, rootKey)
     }
 }
